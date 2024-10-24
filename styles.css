@@ -1,189 +1,287 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  body {
-    font-family: Arial, sans-serif;
-    color: #fff;
-    background-color: #000;
-  }
-  
-  /* Fullscreen Hero Section */
-  #hero {
-    background: url('images/still_1.7.2.png') center center/cover no-repeat;
-  }
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-  section {
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    flex-direction: column;
-  }
+body {
+  font-family: Arial, sans-serif;
+  color: #fff;
+  background-color: #000;
+}
 
+/* Fullscreen Hero Section */
+#hero {
+  background: url('images/still_1.7.2.png') center center/cover no-repeat;
+}
+
+section {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  flex-direction: column;
+}
+
+section p {
+  max-width: 1200px;
+}
+
+.birdie {
+  background: url('images/birdie.png') center center/cover no-repeat;
+  position: absolute;
+  left: 52%;
+  top: 18%;
+  height: 120px;
+  width: 120px;
+}
+
+.hero-content {
+  text-align: center;
+  margin-top: -200px;
+}
+
+.hero-content h1 {
+  font-family: "Anton", sans-serif;
+  font-style: normal;
+  font-size: 6rem;
+  font-weight: 500;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+#hero .section-nav {
+  position: absolute;
+  bottom: 100px;
+  right: 100px;
+  transform: rotate(10deg);
+}
+
+.section-nav .material-symbols-outlined {
+  position: absolute;
+  bottom: -54px;
+  font-size: 80px;
+  margin-left: -33px;
+  left: 50%;
+}
+
+h1 {
+  font-size: 5rem;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  letter-spacing: 0.2rem;
+}
+
+p {
+  font-size: 1.5rem;
+  margin-bottom: 30px;
+}
+
+.scroll-btn {
+  padding: 10px 20px;
+  background-color: #ff6b6b;
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.2rem;
+  border-radius: 5px;
+}
+
+.scroll-btn:hover {
+  background-color: #ff4e4e;
+}
+
+/* Section Styling */
+section {
+  padding: 80px 20px;
+  text-align: center;
+}
+
+#trailer {
+  padding: 30px 0 0;
+}
+
+#about,
+#trailer,
+#team {
+  background-color: #111;
+  color: #ddd;
+}
+
+h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  max-width: 100%;
+  background-color: #222;
+}
+
+#trailer iframe {
+  width: 100%;
+  height: 100%;
+}
+
+#trailer .section-nav {
+  position: absolute;
+  bottom: 100px;
+  right: 100px;
+}
+
+/* Section Navigation Buttons */
+.section-nav {
+  display: inline-block;
+  margin-top: 40px;
+  text-align: center;
+  text-decoration: none;
+  color: #fff;
+  position: relative;
+}
+
+.section-nav img {
+  width: 50px;
+  height: 50px;
+  display: block;
+  margin: 0 auto;
+  filter: invert(100%);
+  transition: transform 0.3s ease;
+}
+
+.section-nav p {
+  margin-top: 10px;
+  font-size: 3rem;
+  font-family: "Caveat", cursive;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.section-nav:hover img {
+  transform: scale(1.1);
+}
+
+.item-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; /* Distributes space evenly between items */
+  gap: 20px;
+}
+
+.item {
+  border-radius: 8px;
+  padding: 15px;
+  width: calc(25% - 20px); /* 4 items per row */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+}
+
+.item img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.item h3 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.item p {
+  font-size: 1rem;
+  color: #555;
+  text-align: center;
+}
+
+footer {
+  padding: 80px;
+  text-align: center;
+}
+
+/* Responsive Design: Adjust columns for smaller screens */
+@media (max-width: 1200px) {
+  .item {
+    width: calc(33.333% - 20px); /* 3 items per row */
+  }
+}
+
+@media (max-width: 900px) {
+  .item {
+    width: calc(50% - 20px); /* 2 items per row */
+  }
+}
+
+@media (max-width: 600px) {
+  .item {
+    width: 100%; /* 1 item per row */
+  }
+}
+
+@media (max-height: 900px) {
   .birdie {
-    background: url('images/birdie.png') center center/cover no-repeat;
-    position: absolute;
-    left: 52%;
-    top: 18%;
-    height: 120px;
-    width: 120px;
+    top: 12%;
   }
-  
-  .hero-content {
-    text-align: center;
-    margin-top: -200px;
-  }
+}
 
-  .hero-content h1 {
-    font-family: "Anton", sans-serif;
-    font-style: normal;
-    font-size: 6rem;
-    font-weight: 500;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+@media (max-height: 715px) or (max-width: 500px) {
+  .birdie {
+    top: 8%;
+    height: 90px;
+    width: 90px;
+  }
+}
+
+@media (max-height: 560px) {
+  .birdie {
+    top: 3%;
+    height: 30px;
+    width: 30px;
+  }
+}
+
+@media (max-width: 660px) {
+  html {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 460px) {
+  html {
+    font-size: 9px;
   }
 
   #hero .section-nav {
     position: absolute;
     bottom: 100px;
-    right: 100px;
+    right: 30px;
     transform: rotate(10deg);
   }
-  
-  h1 {
-    font-size: 5rem;
-    text-transform: uppercase;
-    margin-bottom: 20px;
-    letter-spacing: 0.2rem;
+
+  .birdie {
+    left: 60%;
   }
-  
-  p {
-    font-size: 1.5rem;
-    margin-bottom: 30px;
+}
+
+@media (max-width: 380px) {
+  .birdie {
+    left: 55%;
   }
-  
-  .scroll-btn {
-    padding: 10px 20px;
-    background-color: #ff6b6b;
-    color: #fff;
-    text-decoration: none;
-    font-size: 1.2rem;
-    border-radius: 5px;
-  }
-  
-  .scroll-btn:hover {
-    background-color: #ff4e4e;
-  }
-  
-  /* Section Styling */
-  section {
-    padding: 80px 20px;
-    text-align: center;
+}
+
+@media (min-width: 2000px) {
+  html {
+    font-size: 20px;
   }
 
-  #trailer {
-    padding: 10px 0 0;
+  .hero-content {
+    margin-top: -300px;
   }
-  
-  #about, #trailer, #team {
-    background-color: #111;
-    color: #ddd;
-  }
-  
-  h2 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-  }
-  
-  .video-container {
-    position: relative;
-    padding-bottom: 56.25%;
-    height: 0;
-    overflow: hidden;
-    max-width: 100%;
-    background-color: #222;
-  }
-  
-  #trailer iframe {
-    width: 100%;
-    height: 100%;
-  }
-
-  #trailer .section-nav {
-    position: absolute;
-    bottom: 100px;
-    right: 100px;
-  }
-  
-  /* Section Navigation Buttons */
-  .section-nav {
-    display: inline-block;
-    margin-top: 40px;
-    text-align: center;
-    text-decoration: none;
-    color: #fff;
-  }
-  
-  .section-nav img {
-    width: 50px;
-    height: 50px;
-    display: block;
-    margin: 0 auto;
-    filter: invert(100%);
-    transition: transform 0.3s ease;
-  }
-  
-  .section-nav p {
-    margin-top: 10px;
-    font-size: 3rem;
-    font-family: "Caveat", cursive;
-    font-optical-sizing: auto;
-    font-weight: 500;
-    font-style: normal;
-  }
-  
-  .section-nav:hover img {
-    transform: scale(1.1);
-  }
-
-  @media (max-height: 900px) {
-    .birdie {
-        top: 12%;
-      }
-  }
-
-  @media (max-height: 715px) {
-    .birdie {
-        top: 8%;
-        height: 90px;
-        width: 90px;
-      }
-  }
-
-  @media (max-height: 560px) {
-    .birdie {
-        top: 3%;
-        height: 30px;
-        width: 30px;
-      }
-  }
-
-  @media (max-width: 560px) {
-    html {
-        font-size: 12px;
-      }
-  }
-
-  @media (min-width: 2000px) {
-    html {
-        font-size: 20px;
-    }
-  
-    .hero-content {
-        margin-top: -300px;
-    }
-  }
-  
+}
