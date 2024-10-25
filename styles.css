@@ -65,6 +65,11 @@ section p {
   left: 50%;
 }
 
+h1, h2, h3 {
+  font-family: "Anton", sans-serif;
+  font-style: normal;
+}
+
 h1 {
   font-size: 5rem;
   text-transform: uppercase;
@@ -109,7 +114,7 @@ section {
 
 h2 {
   font-size: 2.5rem;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 
 .video-container {
@@ -132,6 +137,22 @@ h2 {
   right: 100px;
 }
 
+#about {
+  background: #fff;
+  background-image: url(images/45-degree-fabric-dark.png);
+  color: #000;
+}
+
+#about .section-nav {
+  /* text-shadow: 
+  1px 1px 2px rgba(0, 0, 0, 0.4),
+  2px 2px 4px rgba(0, 0, 0, 0.3); */
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
+  /* text-shadow: 
+  0 0 5px rgba(0, 0, 0, 0.5),
+  0 0 10px rgba(0, 0, 0, 0.3); */
+}
+
 /* Section Navigation Buttons */
 .section-nav {
   display: inline-block;
@@ -142,26 +163,24 @@ h2 {
   position: relative;
 }
 
-.section-nav img {
-  width: 50px;
-  height: 50px;
-  display: block;
-  margin: 0 auto;
-  filter: invert(100%);
-  transition: transform 0.3s ease;
-}
-
 .section-nav p {
   margin-top: 10px;
-  font-size: 3rem;
+  font-size: 4rem;
   font-family: "Caveat", cursive;
   font-optical-sizing: auto;
   font-weight: 500;
   font-style: normal;
+  transition: font-size 0.2s;
 }
 
-.section-nav:hover img {
-  transform: scale(1.1);
+.section-nav:hover p {
+  font-size: 4.07rem;
+  transition: font-size 0.2s;
+}
+
+#team {
+  height: auto;
+  background-image: url(images/45-degree-fabric-dark.png);
 }
 
 .item-list {
@@ -178,7 +197,6 @@ h2 {
   display: flex;
   flex-direction: column;
   align-items: center;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.2s;
 }
 
@@ -186,24 +204,24 @@ h2 {
   width: 100%;
   height: auto;
   border-radius: 8px;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 
-.item h3 {
-  font-size: 1.2rem;
-  margin-bottom: 10px;
+.item h2 {
   text-align: center;
 }
 
 .item p {
   font-size: 1rem;
-  color: #555;
   text-align: center;
 }
 
 footer {
-  padding: 80px;
-  text-align: center;
+  padding: 80px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
 }
 
 /* Responsive Design: Adjust columns for smaller screens */
@@ -259,10 +277,12 @@ footer {
   }
 
   #hero .section-nav {
-    position: absolute;
-    bottom: 100px;
+    right: 10px;
+  }
+
+  #trailer .section-nav {
+    bottom: 50px;
     right: 30px;
-    transform: rotate(10deg);
   }
 
   .birdie {

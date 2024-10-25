@@ -6,4 +6,9 @@ document.querySelectorAll('.scroll-btn, .section-nav').forEach(anchor => {
       targetSection.scrollIntoView({ behavior: 'smooth' });
     });
   });
-  
+
+document.addEventListener('DOMContentLoaded', () => {
+  let copyrightYear = document.getElementById('copyrightYear');
+
+  copyrightYear.textContent = new Date().getFullYear();
+});
