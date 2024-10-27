@@ -2,8 +2,23 @@
 document.querySelectorAll('.scroll-btn, .section-nav').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
       e.preventDefault();
-      const targetSection = document.querySelector(this.getAttribute('href'));
-      targetSection.scrollIntoView({ behavior: 'smooth' });
+      let target = this.getAttribute('href');
+      const targetSection = document.querySelector(target);
+
+      if (target == '#trailer') {
+        document.getElementById('hero').style.display = 'none';
+
+        let trailer = document.getElementById('trailer');
+
+        trailer.style.display = 'flex';
+
+        let player = new Vimeo.Player(trailer.querySelector('iframe'));
+
+        player.play();
+      }
+      else {
+        targetSection.scrollIntoView({ behavior: 'smooth' });
+      }
     });
   });
 
