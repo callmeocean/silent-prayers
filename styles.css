@@ -135,7 +135,7 @@ h2 {
 #trailer .section-nav {
   position: absolute;
   bottom: 100px;
-  right: 100px;
+  margin: 0 auto;
 }
 
 #about {
