@@ -220,6 +220,7 @@ h2 {
 
 .split-in-two .split-item img {
   width: 100%;
+  max-height: 100%;
 }
 
 #team {
@@ -273,7 +274,9 @@ footer {
   .item {
     width: calc(33.333% - 20px); /* 3 items per row */
   }
+}
 
+@media (max-width: 1300px) {
   #screening .split-in-two .contact-us {
     flex-direction: column;
   }
@@ -317,6 +320,14 @@ footer {
   }
 }
 
+@media (max-height: 600px) {
+  #about,
+  #trailer,
+  #team {
+    height: auto;
+  }
+}
+
 @media (max-height: 560px) {
   .birdie {
     top: 3%;
@@ -333,7 +344,7 @@ footer {
 
 @media (max-width: 460px) {
   html {
-    font-size: 9px;
+    font-size: 10px;
   }
 
   #hero .section-nav {
