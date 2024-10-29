@@ -52,9 +52,25 @@ section p {
 
 #hero .section-nav {
   position: absolute;
-  bottom: 100px;
-  right: 100px;
-  transform: rotate(10deg);
+  height: 100%;
+  width: 100%;
+  margin: 0;
+}
+
+#hero .section-nav:hover span {
+  transform: none;
+}
+
+#hero .section-nav span:hover {
+  transform: scale(1.1);
+}
+
+#hero .section-nav .material-symbols-outlined {
+  position: absolute;
+  font-size: 160px;
+  margin-left: -80px;
+  left: 50%;
+  bottom: 30%;
 }
 
 .section-nav .material-symbols-outlined {
