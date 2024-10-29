@@ -14,9 +14,9 @@ document.querySelectorAll('.scroll-btn, .section-nav').forEach(anchor => {
 
         let player = new Vimeo.Player(trailer.querySelector('iframe'));
 
-        player.play();
-
-        setTimeout(() => { player.requestFullscreen(); }, 1000);
+        player.play().then(function() {
+          player.requestFullscreen();
+        });
       }
       else {
         targetSection.scrollIntoView({ behavior: 'smooth' });
