@@ -288,6 +288,26 @@ footer {
   gap: 5px;
 }
 
+.connect {
+  display: flex;
+  margin-top: 100px;
+  justify-items: center;
+  align-items: center;
+  gap: 100px;
+}
+
+.connect h3 {
+  font-size: 4rem;
+  font-family: "Caveat", cursive;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.connect a img {
+  width: 100px;
+}
+
 /* Responsive Design: Adjust columns for smaller screens */
 @media (max-width: 1200px) {
   .item {
